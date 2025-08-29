@@ -11,10 +11,10 @@ confirmParticipation(
     int memberId,
     int eventId,
     String userName,
-    String tableNumber,
     String userCategory,
     String userBranch,
-    String userPrize) {
+    String userRegion,
+    String userTshirt) {
   TextEditingController rejectionReasonController = new TextEditingController();
   AlertDialog alert = AlertDialog(
     content: Padding(
@@ -49,10 +49,10 @@ confirmParticipation(
             child: Container(
                 margin: EdgeInsets.only(left: 5),
                 child: Text(
-                  "Table No : " +
-                      (tableNumber == "" || tableNumber.toLowerCase() == "null"
+                  "TShirt Size : " +
+                      (userTshirt == "" || userTshirt.toLowerCase() == "null"
                           ? "N/A"
-                          : tableNumber),
+                          : userTshirt),
                   style: GoogleFonts.montserrat(
                       fontSize: 10.sp, fontWeight: FontWeight.normal),
                 )),
@@ -73,10 +73,10 @@ confirmParticipation(
                 margin: EdgeInsets.only(left: 5),
                 child: Text(
                   // "Prize : N/A",
-                  "Gift : " +
-                      (userPrize == "" || userPrize.toLowerCase() == "null"
+                  "Region : " +
+                      (userRegion == "" || userRegion.toLowerCase() == "null"
                           ? "N/A"
-                          : userPrize),
+                          : userRegion),
                   style: GoogleFonts.montserrat(
                       fontSize: 10.sp, fontWeight: FontWeight.normal),
                 )),
