@@ -1,12 +1,14 @@
 workflows:
-  default-workflow:
-    name: Default Workflow
+  android-release:
+    name: Android Release
+    environment:
+      flutter: 3.13.9
     scripts:
-      - name: Run launcher icons
+      - name: Generate launcher icons
         script: |
           flutter clean
           flutter pub get
           flutter pub run flutter_launcher_icons:main
-      - name: Build Android
+      - name: Build Android APK
         script: |
           flutter build apk --release
