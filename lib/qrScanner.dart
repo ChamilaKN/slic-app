@@ -51,13 +51,14 @@ class _qrScannerState extends State<qrScanner> {
               int.parse(scanData.code.toString()),
               widget.dynamicList[0]["event_id"],
               data[0]["data_list"]["name"].toString(),
-              data[0]["data_list"]["table_no"].toString(),
+              // data[0]["data_list"]["table_no"].toString(),
               data[0]["data_list"]["category"].toString(),
               data[0]["data_list"]["branch_name"].toString(),
+              data[0]["data_list"]["region"].toString(),
               // "(" +
               // data[0]["data_list"]["branch_code"].toString() +
               // ")",
-              data[0]["data_list"]["prize"].toString())
+              data[0]["data_list"]["tshirt_size"].toString())
           : errorDialog(
               context,
               data[0]["response_text"],
