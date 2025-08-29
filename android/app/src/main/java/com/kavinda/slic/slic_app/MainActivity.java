@@ -1,0 +1,6 @@
+package com.kavinda.slic.slic_app;
+
+import io.flutter.embedding.android.FlutterActivity;
+
+public class MainActivity extends FlutterActivity {
+}
