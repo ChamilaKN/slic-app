@@ -1,0 +1,12 @@
+workflows:
+  default-workflow:
+    name: Default Workflow
+    scripts:
+      - name: Run launcher icons
+        script: |
+          flutter clean
+          flutter pub get
+          flutter pub run flutter_launcher_icons:main
+      - name: Build Android
+        script: |
+          flutter build apk --release
